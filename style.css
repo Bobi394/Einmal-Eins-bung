@@ -1,18 +1,122 @@
+/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
     text-align: center;
-    padding: 20px;
 }
 
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #374785;
+}
+
+/* Container für die Modi */
+#mode-selection, #random-mode, #row-mode {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+h2 {
+    color: #ff8552;
+}
+
+/* Buttons */
 button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+button:hover {
+    background: linear-gradient(135deg, #ff8552 0%, #ff7eb3 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Input-Felder */
 input {
-    margin: 10px;
-    padding: 5px;
-    font-size: 16px;
-    width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #74ebd5;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff7eb3;
+}
+
+/* Feedback */
+#random-feedback, #row-feedback {
+    font-size: 1.2rem;
+    color: #ff7eb3;
+    margin-top: 10px;
+}
+
+/* Dropdown für Reihen-Auswahl */
+select {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #74ebd5;
+    font-size: 1rem;
+    margin: 20px 0;
+    outline: none;
+    width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #ff7eb3;
+}
+
+/* Allgemeine Animationen */
+#random-mode, #row-mode {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+#random-mode.show, #row-mode.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#random-mode .fade-in, #row-mode .fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
