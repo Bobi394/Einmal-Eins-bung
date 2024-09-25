@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ein-mal-eins Übung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ein-mal-eins Übung</h1>
+    <div id="mode-selection">
+        <button onclick="startRandom()">Zufällige Aufgaben</button>
+        <button onclick="chooseRow()">Reihe üben</button>
+    </div>
+    
+    <div id="random-mode" style="display: none;">
+        <h2>Zufällige Aufgaben</h2>
+        <div id="random-question"></div>
+        <input type="number" id="random-answer" placeholder="Deine Antwort">
+        <button onclick="checkRandomAnswer()">Überprüfen</button>
+        <div id="random-feedback"></div>
+        <button onclick="nextRandomQuestion()">Nächste Aufgabe</button>
+    </div>
+    
+    <div id="row-mode" style="display: none;">
+        <h2>Reihe Üben</h2>
+        <select id="row-selection">
+            <option value="1">1er Reihe</option>
+            <option value="2">2er Reihe</option>
+            <option value="3">3er Reihe</option>
+            <!-- weitere Reihen nach Bedarf hinzufügen -->
+        </select>
+        <button onclick="startRowPractice()">Starten</button>
+        <div id="row-question"></div>
+        <input type="number" id="row-answer" placeholder="Deine Antwort">
+        <button onclick="checkRowAnswer()">Überprüfen</button>
+        <div id="row-feedback"></div>
+        <button onclick="nextRowQuestion()">Nächste Aufgabe</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
