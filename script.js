@@ -1,8 +1,11 @@
 let currentMultiplicand, currentMultiplier;
 
 function startRandom() {
+    // Zeige den Modus für zufällige Aufgaben
     document.getElementById("mode-selection").style.display = "none";
-    document.getElementById("random-mode").style.display = "block";
+    const randomMode = document.getElementById("random-mode");
+    randomMode.style.display = "block";
+    randomMode.classList.add("show");
     nextRandomQuestion();
 }
 
@@ -24,8 +27,11 @@ function checkRandomAnswer() {
 }
 
 function chooseRow() {
+    // Zeige den Modus für das Üben einer Reihe
     document.getElementById("mode-selection").style.display = "none";
-    document.getElementById("row-mode").style.display = "block";
+    const rowMode = document.getElementById("row-mode");
+    rowMode.style.display = "block";
+    rowMode.classList.add("show");
 }
 
 function startRowPractice() {
