@@ -55,3 +55,10 @@ function checkRowAnswer() {
         document.getElementById("row-feedback").innerText = `Falsch! Die richtige Antwort ist ${currentMultiplicand * currentMultiplier}.`;
     }
 }
+
+// Funktion zum Zurückkehren zum Hauptmenü
+function goBackToMenu() {
+    document.getElementById("random-mode").style.display = "none";
+    document.getElementById("row-mode").style.display = "none";
+    document.getElementById("mode-selection").style.display = "block";
+}
